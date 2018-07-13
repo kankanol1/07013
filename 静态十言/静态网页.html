@@ -1,0 +1,1121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>静态网页</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            border: 0;
+        }
+        .clearfix:after{
+            content: '.';
+            display: block;
+            height: 0;
+            visibility: hidden;
+            clear: both;
+        }
+        *clearfix:after{
+            *zoom: 1;
+        }
+        ul{
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+
+        }
+        table{
+            border-collapse: collapse;
+            border: 1px solid #e8e8e8;
+        }
+/****************************以上清除格式******************************/
+        .center{
+            width: 1200px;
+            margin: 0 auto;
+        }
+        #top{
+            height: 2900px;
+        }
+        /*抬头*/
+        #top-p{
+            background-color: #55575a;
+            height: 32px;
+            font-size: 12px;
+            color: #fff;
+        }
+        #top-p ul{
+            position: relative;
+            height: 32px;
+            line-height: 32px;
+            list-style: none;
+        }
+        #top-p div div{
+            margin-top: 0;
+            float: right;
+            line-height: 32px;
+            margin-left: 25px;
+
+        }
+        #top-p div p{
+            height: 32px;
+            line-height: 32px;
+            float:left;
+        }
+        #top-p div div p:hover{
+            cursor: pointer;
+        }
+        #top-p div div ul{
+            display: none;
+        }
+        /*广告*/
+        #top-img{
+            overflow: hidden;
+            margin-top: 20px;
+        }
+        #top-ul{
+            list-style: none;
+            position: relative;
+        }
+        #top-ul li {
+            float: left;
+            margin-right: 14px;
+        }
+        /*搜索行*/
+        #top-img-down{
+
+            height: 50px;
+            line-height: 50px;
+            position: relative;
+            padding: 20px auto;
+            position: relative;
+        }
+        #top-img-down div,
+        #top-img-down p,
+        #top-img-down a{
+            float: right;
+        }
+        #top-img-down img{
+
+            height: 50px;
+            line-height: 50px;
+            margin-top: 20px;
+            float: left;
+        }
+        #top-img-down div{
+            position: relative;
+            width: 484px;
+            height: 40px;
+            margin-top: 22px;
+            border: 3px solid #e56660;
+        }
+        #top-img-down div #search{
+            width: 413px;
+            height: 38px;
+            float: left;
+            padding-left:5px;
+            border: 0;
+            margin-top: 2px;
+            margin-left: 1px;
+            outline: none;
+            font-size: 20px;
+        }
+        #top-img-down div #search-btn{
+            float: left;
+            height: 40px;
+            width: 64px;
+            background-color: #e56660;
+            color: #fff;
+        }
+        #top-img-down p{
+            margin-top: 22px;
+            margin-left: 35px;
+        }
+        #top-img-down a{
+            display: block;
+            margin-top: 22px;
+            margin-right: 0;
+            background-color: #e56660;
+            height: 45px;
+            width: 123px;
+            color: white;
+            text-align: center;
+            margin-left: 35px;
+        }
+        /*导航栏样式*/
+        #nav {
+            height: 58px;
+            border-bottom: 1px solid #da251d;
+            background-color: #f6c8c6;
+            margin-top: 40px;
+            line-height: 58px;
+            overflow: hidden;
+        }
+        .center1{
+            margin: 0 auto;
+            width: 1200px;
+        }
+        #nav div ul{
+            width: 887px;
+            position: relative;
+            line-height: 33px;
+            padding: 13px 100px;
+            margin: 0 auto;
+        }
+        #nav div ul div{
+            float: left;
+        }
+        #nav div ul li{
+            float: left;
+            padding: 0 50px;
+            border-left:1px solid white;
+            border-right:1px solid #c5c5cd;
+        }
+        #nav div ul li a{
+            color: #da251d;
+        }
+
+        #yan-img{
+            /*height: 306px;*/
+            height: 300px;
+            background-color: #f2f2f2;
+            position: relative;
+        }
+        #yan-img img{
+            height: 300px;
+            width: 1200px;
+            margin: 0 auto;
+        }
+
+        #left-div{
+            height: 303px;
+            width: 195px;
+            background-color: #fafafa;
+            float: left;
+        }
+        #body-content{
+            position: relative;
+        }
+        #right-table{
+            width: 1005px;
+            border: 1px solid #e8e8e8;
+            float: left;
+        }
+        #right-table tr{
+            height: 151px;
+        }
+        #right-table td{
+            border: 1px solid #e8e8e8;
+        }
+
+        .center-div{
+            position: relative;
+            height: 270px;
+            margin-top: 303px;
+            padding: 50px 0;
+        }
+        .center-left{
+            width: 575px;
+            float: left;
+            position: relative;
+        }
+        .center-up ul{
+            position: relative;
+            line-height: 17px;
+            height: 17px;
+            border-bottom: 2px solid #f6c8c6;
+            padding-bottom: 10px;
+        }
+        .center-up ul li{
+            line-height: 17px;
+            border-right: 3px solid #eeebea;
+            float: left;
+            font-size: 15px;
+            padding:0 11px;
+        }
+        .center-up ul li a{
+            color: #fe7426;
+        }
+        .center-down{
+            height: 235px;
+            width: 575px;
+            position: relative;
+            padding: 10px 0;
+        }
+        .tb{
+            width: 420px;
+            float: none;
+            line-height: 56px;
+            height: 56px;
+            margin-bottom: 10px;
+
+        }
+        .tb div div{
+            float: left;
+
+        }
+        .tb div{
+            position: relative;
+            overflow: hidden;
+        }
+        .div1{
+            float: left;
+            height: 56px;
+            width: 90px;
+            background-color:  #ed6b65;
+            color: #f2f2f2;
+            text-align: center;
+            line-height: 56px;
+            margin: 13px 20px 12px 0;
+            font-size: 13px;
+        }
+        .div2{
+            float: left;
+            width: 280px;
+            height: 56px;
+            margin: 7px 0;
+            padding: 8px 0;
+        }
+        .div2 ul{
+            height: 28px;
+            line-height: 28px;
+            position: relative;
+        }
+        .div2 ul li{
+     height: 28px;
+     font-size: 12px;
+     text-align: left;
+     padding-left: 0;
+     width: 70px;
+     float: left;
+ }
+
+        /*咨询导航栏*/
+        #ask-nav{
+            position: relative;
+            border-bottom: 3px solid  #f6c8c6;
+
+        }
+        #ask-nav strong{
+            float: left;
+            height: 20px;
+            line-height: 20px;
+            padding: 15px 0;
+            font-size: 20px;
+            color: #de3d36;
+            width: 100px;
+        }
+        #ask-nav p{
+            position: relative;
+            float: right;
+            height: 15px;
+            line-height: 15px;
+            padding: 15px 0;
+            color: #de3d36;
+            top: -43px;
+
+        }
+        #ask-nav ul{
+            position: relative;
+            height: 15px;
+            line-height: 15px;
+            padding: 15px 0;
+            margin: 0 auto;
+            width: 880px;
+        }
+        #ask-nav ul li{
+            float: left;
+            border-right: 1px solid #e5e5e5;
+            width: 66px;
+            text-align: center;
+        }
+
+        #ask-info{
+            position: relative;
+           /* border:1px solid #f50c3a;*/
+            height: 400px;
+            padding: 25px 0;
+
+        }
+        #ask-info .ask-div{
+            height: 347px;
+            width: 179px;
+            float: left;
+            margin: 0 10px;
+            border: 1px solid #e5e5e5;
+        }
+
+        #footer{
+            height: 110px;
+            line-height: 110px;
+            background-color: #dc3029;
+            position: relative;
+        }
+        #footer .center img{
+            float: left;
+            height: 60px;
+            line-height: 60px;
+            margin: 25px 25px 25px 25px;
+        }
+        #footer .center ul{
+            float: right;
+            height: 110px;
+            line-height: 110px;
+            margin-right: 40px;
+        }
+        #footer .center ul li {
+            float: left;
+            text-align: center;
+            font-size: 17px;
+            width: 140px;
+
+        }
+        #footer .center ul li a{
+            color: #fff;
+        }
+        .information{
+            height: 190px;
+
+        }
+        .info{
+            height: 120px;
+            width: 160px;
+            float: left;
+            margin: 40px 20px 0 20px;
+        }
+        .info p{
+            font-size: 13px;
+            color: #fff;
+        }
+        .info ul{
+            height: 120px;
+            width: 160px;
+            position: relative;
+        }
+        .info ul li{
+            float: left;
+            height: 30px;
+            line-height: 30px;
+            width: 80px;
+            font-size: 12px;
+            color: #fff;
+        }
+        #foot{
+            height: 540px;
+            background-color: #e1514a;
+        }
+
+
+
+    </style>
+</head>
+<body>
+<div id="top">
+    <div id="top-p" class="center">
+        <div >
+            <p>Hello，Welcome come to The YanShi Group!</p>
+
+            <div align="right">
+                <p>业务总览&nbsp;∨</p>
+                <ul>
+                    <li>Web前端</li>
+                    <li>UI设计</li>
+                    <li>数据库</li>
+                </ul>
+            </div>
+            <div style="width: 0;border-left: 1px dashed #fff; height: 10px;margin-top: 12px;"></div>
+            <div align="right">
+                <p>微信关注&nbsp;∨</p>
+                <ul>
+                    <li>Web前端</li>
+                    <li>UI设计</li>
+                    <li>数据库</li>
+                </ul>
+            </div>
+            <div style="width: 0;border-left: 1px dashed #fff; height: 10px;margin-top: 12px;"></div>
+            <div align="right">
+                <p >集团招聘&nbsp;∨</p>
+                <ul style="height: 150px;line-height: 50px;">
+                    <li style="float: none;padding-left: 0;width: 100px"><a href="javascript:;">Web前端</a></li>
+                    <li><a href="javascript:;">UI设计</a></li>
+                    <li><a href="javascript:;">数据库</a></li>
+                </ul>
+            </div>
+
+            <div align="right">
+                <p>关于我们&nbsp;∨</p>
+                <ul >
+                    <li>Web前端</li>
+                    <li>UI设计</li>
+                    <li>数据库</li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+    <div id="top-img" class="center">
+        <ul id="top-ul">
+            <li><img src="img/wang.jpg" alt=""></li>
+            <li><img src="img/wang.jpg" alt=""></li>
+            <li><img src="img/wang.jpg" alt=""></li>
+            <li  style="margin-right: 0"><img src="img/wang.jpg" alt=""></li>
+        </ul>
+    </div>
+    <div id="top-img-down" class="center">
+        <img src="img/aLogo.jpg" alt="">
+        <a href="javascript:;">发布需求∨</a>
+        <p>或</p>
+        <div>
+             <input type="text" name="search" id="search">
+             <input type="button" name="" id="search-btn" value="搜索" style="float: right;">
+        </div>
+    </div>
+    <!--导航栏-->
+    <div id="nav">
+        <div class="center1">
+            <ul id="nav-ul">
+                <div style="width: 0;border-right: 1px solid #c5c5cd;height: 33px;"></div>
+                <li style="border-left: 0"></li>
+                <li><a href="javascript:;">首页</a></li>
+                <li><a href="javascript:;">找服务</a></li>
+                <li><a href="javascript:;">选顾问</a></li>
+                <li><a href="javascript:;">提问题</a></li>
+                <li><a href="javascript:;">赏案例</a></li>
+                <li><a href="javascript:;">阅资讯</a></li>
+                <div style="width: 0;border-left: 1px solid white;height: 33px;"></div>
+
+            </ul>
+        </div>
+
+    </div>
+    <!--轮播图-->
+    <div id="yan-img">
+       <div class="center">
+           <img src="img/ys.jpg" alt="">
+       </div>
+    </div>
+    <!--知识产权logo信息-->
+    <div class="center">
+        <div id="body-content">
+            <div id="left-div">
+                <p>知识产权服务</p>
+                <strong>“商标&nbsp;专利&nbsp;版权”</strong>
+                <p>副部级审查员参与，提升成功率</p>
+                <input type="button" value="马上沟通">
+                <img src="#">
+                <div>
+                    <p>做生意，谁敢没有商标？</p>
+                    <p>如何注册？</p>
+                </div>
+            </div>
+            <table id="right-table">
+                <tbody>
+                <tr>
+                    <td>
+                        <img src="" alt="">
+                        <div>
+                            <strong>工商</strong>
+                            <p>logo设计，VI设计，视频广告</p>
+                            <a href="javascript:;"></a>
+                        </div>
+                    </td>
+                    <td> <img src="" alt="">
+                        <div>
+                            <strong>工商</strong>
+                            <p>logo设计，VI设计，视频广告</p>
+                            <a href="javascript:;"></a>
+                        </div></td>
+                    <td> <img src="" alt="">
+                        <div>
+                            <strong>工商</strong>
+                            <p>logo设计，VI设计，视频广告</p>
+                            <a href="javascript:;"></a>
+                        </div></td>
+                    <td> <img src="" alt="">
+                        <div>
+                            <strong>工商</strong>
+                            <p>logo设计，VI设计，视频广告</p>
+                            <a href="javascript:;"></a>
+                        </div></td>
+                </tr>
+                <tr>
+                    <td> <img src="" alt="">
+                        <div>
+                            <strong>工商</strong>
+                            <p>logo设计，VI设计，视频广告</p>
+                            <a href="javascript:;"></a>
+                        </div></td>
+                    <td> <img src="" alt="">
+                        <div>
+                            <strong>工商</strong>
+                            <p>logo设计，VI设计，视频广告</p>
+                            <a href="javascript:;"></a>
+                        </div></td>
+                    <td> <img src="" alt="">
+                        <div>
+                            <strong>工商</strong>
+                            <p>logo设计，VI设计，视频广告</p>
+                            <a href="javascript:;"></a>
+                        </div></td>
+                    <td> <img src="" alt="">
+                        <div>
+                            <strong>工商</strong>
+                            <p>logo设计，VI设计，视频广告</p>
+                            <a href="javascript:;"></a>
+                        </div></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!--商标注册-->
+    <div class="center">
+        <div  class="center-div" >
+            <div class="center-left" style="float: left">
+                <div class="center-up">
+                    <ul>
+                        <li style="padding-left: 0;">工商/资质</li>
+                        <li>会计代理</li>
+                        <li>网站建设</li>
+                        <li style="border-right: 0">知识产权</li>
+                        <li style="float: right;border-right: 0;"><a href="#">更多></a></li>
+                    </ul>
+                </div>
+                <div class="center-down">
+                    <div class="tb" style="float: left">
+                        <div style="position: relative">
+                            <div class="div1">工商/资质</div>
+                            <div class="div2">
+                                <ul>
+                                    <li><a href="javascript:;" style="color: #fe6700;font-size: 12px;">公司注册</a></li>
+                                    <li><a href="javascript:;">个体工商户</a></li>
+                                    <li><a href="javascript:;" style="color: #fe6700">外资注册</a></li>
+                                    <li><a href="javascript:;" style="color: #fe6700">工商变更</a></li>
+                                </ul>
+                                <ul>
+                                    <li><a href="javascript:;">总承包资质</a></li>
+                                    <li><a href="javascript:;">专业承包</a></li>
+                                    <li><a href="javascript:;">设计资质</a></li>
+                                    <li><a href="javascript:;">劳务分包</a></li>
+                                </ul>
+                            </div>
+                        </div >
+                        <div style="position: relative">
+                            <div class="div1">工商/资质</div>
+                            <div class="div2">
+                                <ul>
+                                    <li><a href="javascript:;" style="color: #fe6700;font-size: 12px;">公司注册</a></li>
+                                    <li><a href="javascript:;">个体工商户</a></li>
+                                    <li><a href="javascript:;" style="color: #fe6700">外资注册</a></li>
+                                    <li><a href="javascript:;" style="color: #fe6700">工商变更</a></li>
+                                </ul>
+                                <ul>
+                                    <li><a href="javascript:;">总承包资质</a></li>
+                                    <li><a href="javascript:;">专业承包</a></li>
+                                    <li><a href="javascript:;">设计资质</a></li>
+                                    <li><a href="javascript:;">劳务分包</a></li>
+                                </ul>
+                            </div>
+                        </div >
+                        <div style="position: relative">
+                            <div class="div1">工商/资质</div>
+                            <div class="div2">
+                                <ul>
+                                    <li><a href="javascript:;" style="color: #fe6700;font-size: 12px;">公司注册</a></li>
+                                    <li><a href="javascript:;">个体工商户</a></li>
+                                    <li><a href="javascript:;" style="color: #fe6700">外资注册</a></li>
+                                    <li><a href="javascript:;" style="color: #fe6700">工商变更</a></li>
+                                </ul>
+                                <ul>
+                                    <li><a href="javascript:;">总承包资质</a></li>
+                                    <li><a href="javascript:;">专业承包</a></li>
+                                    <li><a href="javascript:;">设计资质</a></li>
+                                    <li><a href="javascript:;">劳务分包</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                   <!-- <div class="div3">
+                        <img src="" alt="">
+                        <img src="" alt="">
+                    </div>-->
+                    <div style="height: 145px;float: right;position: relative;top: 12px;">
+                        <div><img src="img/shop.jpg" slt="" style="height: 110px;width: 145px;margin-bottom: 5px"></div>
+                        <div><img src="img/shop.jpg" slt="" style="height: 110px;width: 145px"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="center-right" style="float: right">
+                <div class="center-up">
+                    <ul>
+                        <li style="padding-left: 0;">工商/资质</li>
+                        <li>会计代理</li>
+                        <li>网站建设</li>
+                        <li style="border-right: 0">知识产权</li>
+                        <li style="float: right;border-right: 0;"><a href="#">更多></a></li>
+                    </ul>
+                </div>
+                <div class="center-down">
+                    <div class="tb" style="float: left">
+                        <div style="position: relative">
+                            <div class="div1">工商/资质</div>
+                            <div class="div2">
+                                <ul>
+                                    <li><a href="javascript:;" style="color: #fe6700;font-size: 12px;">公司注册</a></li>
+                                    <li><a href="javascript:;">个体工商户</a></li>
+                                    <li><a href="javascript:;" style="color: #fe6700">外资注册</a></li>
+                                    <li><a href="javascript:;" style="color: #fe6700">工商变更</a></li>
+                                </ul>
+                                <ul>
+                                    <li><a href="javascript:;">总承包资质</a></li>
+                                    <li><a href="javascript:;">专业承包</a></li>
+                                    <li><a href="javascript:;">设计资质</a></li>
+                                    <li><a href="javascript:;">劳务分包</a></li>
+                                </ul>
+                            </div>
+                        </div >
+                        <div style="position: relative">
+                            <div class="div1">工商/资质</div>
+                            <div class="div2">
+                                <ul>
+                                    <li><a href="javascript:;" style="color: #fe6700;font-size: 12px;">公司注册</a></li>
+                                    <li><a href="javascript:;">个体工商户</a></li>
+                                    <li><a href="javascript:;" style="color: #fe6700">外资注册</a></li>
+                                    <li><a href="javascript:;" style="color: #fe6700">工商变更</a></li>
+                                </ul>
+                                <ul>
+                                    <li><a href="javascript:;">总承包资质</a></li>
+                                    <li><a href="javascript:;">专业承包</a></li>
+                                    <li><a href="javascript:;">设计资质</a></li>
+                                    <li><a href="javascript:;">劳务分包</a></li>
+                                </ul>
+                            </div>
+                        </div >
+                        <div style="position: relative">
+                            <div class="div1">工商/资质</div>
+                            <div class="div2">
+                                <ul>
+                                    <li><a href="javascript:;" style="color: #fe6700;font-size: 12px;">公司注册</a></li>
+                                    <li><a href="javascript:;">个体工商户</a></li>
+                                    <li><a href="javascript:;" style="color: #fe6700">外资注册</a></li>
+                                    <li><a href="javascript:;" style="color: #fe6700">工商变更</a></li>
+                                </ul>
+                                <ul>
+                                    <li><a href="javascript:;">总承包资质</a></li>
+                                    <li><a href="javascript:;">专业承包</a></li>
+                                    <li><a href="javascript:;">设计资质</a></li>
+                                    <li><a href="javascript:;">劳务分包</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="div3">
+                         <img src="" alt="">
+                         <img src="" alt="">
+                     </div>-->
+                    <div style="height: 145px;float: right;position: relative;top: 12px;">
+                        <div><img src="img/shop.jpg" slt="" style="height: 110px;width: 145px;margin-bottom: 5px"></div>
+                        <div><img src="img/shop.jpg" slt="" style="height: 110px;width: 145px"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div  class="center-div1" >
+            <div class="center-left" style="float: left">
+                <div class="center-up">
+                    <ul>
+                        <li style="padding-left: 0;">工商/资质</li>
+                        <li>会计代理</li>
+                        <li>网站建设</li>
+                        <li style="border-right: 0">知识产权</li>
+                        <li style="float: right;border-right: 0;"><a href="#">更多></a></li>
+                    </ul>
+                </div>
+                <div class="center-down">
+                    <div class="tb" style="float: left">
+                        <div style="position: relative">
+                            <div class="div1">工商/资质</div>
+                            <div class="div2">
+                                <ul>
+                                    <li><a href="javascript:;" style="color: #fe6700;font-size: 12px;">公司注册</a></li>
+                                    <li><a href="javascript:;">个体工商户</a></li>
+                                    <li><a href="javascript:;" style="color: #fe6700">外资注册</a></li>
+                                    <li><a href="javascript:;" style="color: #fe6700">工商变更</a></li>
+                                </ul>
+                                <ul>
+                                    <li><a href="javascript:;">总承包资质</a></li>
+                                    <li><a href="javascript:;">专业承包</a></li>
+                                    <li><a href="javascript:;">设计资质</a></li>
+                                    <li><a href="javascript:;">劳务分包</a></li>
+                                </ul>
+                            </div>
+                        </div >
+                        <div style="position: relative">
+                            <div class="div1">工商/资质</div>
+                            <div class="div2">
+                                <ul>
+                                    <li><a href="javascript:;" style="color: #fe6700;font-size: 12px;">公司注册</a></li>
+                                    <li><a href="javascript:;">个体工商户</a></li>
+                                    <li><a href="javascript:;" style="color: #fe6700">外资注册</a></li>
+                                    <li><a href="javascript:;" style="color: #fe6700">工商变更</a></li>
+                                </ul>
+                                <ul>
+                                    <li><a href="javascript:;">总承包资质</a></li>
+                                    <li><a href="javascript:;">专业承包</a></li>
+                                    <li><a href="javascript:;">设计资质</a></li>
+                                    <li><a href="javascript:;">劳务分包</a></li>
+                                </ul>
+                            </div>
+                        </div >
+                        <div style="position: relative">
+                            <div class="div1">工商/资质</div>
+                            <div class="div2">
+                                <ul>
+                                    <li><a href="javascript:;" style="color: #fe6700;font-size: 12px;">公司注册</a></li>
+                                    <li><a href="javascript:;">个体工商户</a></li>
+                                    <li><a href="javascript:;" style="color: #fe6700">外资注册</a></li>
+                                    <li><a href="javascript:;" style="color: #fe6700">工商变更</a></li>
+                                </ul>
+                                <ul>
+                                    <li><a href="javascript:;">总承包资质</a></li>
+                                    <li><a href="javascript:;">专业承包</a></li>
+                                    <li><a href="javascript:;">设计资质</a></li>
+                                    <li><a href="javascript:;">劳务分包</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="div3">
+                         <img src="" alt="">
+                         <img src="" alt="">
+                     </div>-->
+                    <div style="height: 145px;float: right;position: relative;top: 12px;">
+                        <div><img src="img/shop.jpg" slt="" style="height: 110px;width: 145px;margin-bottom: 5px"></div>
+                        <div><img src="img/shop.jpg" slt="" style="height: 110px;width: 145px"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="center-right" style="float: right">
+                <div class="center-up">
+                    <ul>
+                        <li style="padding-left: 0;">工商/资质</li>
+                        <li>会计代理</li>
+                        <li>网站建设</li>
+                        <li style="border-right: 0">知识产权</li>
+                        <li style="float: right;border-right: 0;"><a href="#">更多></a></li>
+                    </ul>
+                </div>
+                <div class="center-down">
+                    <div class="tb" style="float: left">
+                        <div style="position: relative">
+                            <div class="div1">工商/资质</div>
+                            <div class="div2">
+                                <ul>
+                                    <li><a href="javascript:;" style="color: #fe6700;font-size: 12px;">公司注册</a></li>
+                                    <li><a href="javascript:;">个体工商户</a></li>
+                                    <li><a href="javascript:;" style="color: #fe6700">外资注册</a></li>
+                                    <li><a href="javascript:;" style="color: #fe6700">工商变更</a></li>
+                                </ul>
+                                <ul>
+                                    <li><a href="javascript:;">总承包资质</a></li>
+                                    <li><a href="javascript:;">专业承包</a></li>
+                                    <li><a href="javascript:;">设计资质</a></li>
+                                    <li><a href="javascript:;">劳务分包</a></li>
+                                </ul>
+                            </div>
+                        </div >
+                        <div style="position: relative">
+                            <div class="div1">工商/资质</div>
+                            <div class="div2">
+                                <ul>
+                                    <li><a href="javascript:;" style="color: #fe6700;font-size: 12px;">公司注册</a></li>
+                                    <li><a href="javascript:;">个体工商户</a></li>
+                                    <li><a href="javascript:;" style="color: #fe6700">外资注册</a></li>
+                                    <li><a href="javascript:;" style="color: #fe6700">工商变更</a></li>
+                                </ul>
+                                <ul>
+                                    <li><a href="javascript:;">总承包资质</a></li>
+                                    <li><a href="javascript:;">专业承包</a></li>
+                                    <li><a href="javascript:;">设计资质</a></li>
+                                    <li><a href="javascript:;">劳务分包</a></li>
+                                </ul>
+                            </div>
+                        </div >
+                        <div style="position: relative">
+                            <div class="div1">工商/资质</div>
+                            <div class="div2">
+                                <ul>
+                                    <li><a href="javascript:;" style="color: #fe6700;font-size: 12px;">公司注册</a></li>
+                                    <li><a href="javascript:;">个体工商户</a></li>
+                                    <li><a href="javascript:;" style="color: #fe6700">外资注册</a></li>
+                                    <li><a href="javascript:;" style="color: #fe6700">工商变更</a></li>
+                                </ul>
+                                <ul>
+                                    <li><a href="javascript:;">总承包资质</a></li>
+                                    <li><a href="javascript:;">专业承包</a></li>
+                                    <li><a href="javascript:;">设计资质</a></li>
+                                    <li><a href="javascript:;">劳务分包</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="div3">
+                         <img src="" alt="">
+                         <img src="" alt="">
+                     </div>-->
+                    <div style="height: 145px;float: right;position: relative;top: 12px;">
+                        <div><img src="img/shop.jpg" slt="" style="height: 110px;width: 145px;margin-bottom: 5px"></div>
+                        <div><img src="img/shop.jpg" slt="" style="height: 110px;width: 145px"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--中间的图片-->
+    <div class="center" >
+        <img src="img/middle.jpg" alt="" style="margin: 40px 0;">
+    </div>
+    <!--顾问栏-->
+    <div class="center">
+        <div>
+            <!--顾问导航栏-->
+            <div id="ask-nav">
+                <strong>商务顾问</strong>
+                <ul>
+                    <li><a href="javascript:;" style="color: #de3d36;">网站</a></li>
+                    <li><a href="javascript:;">营销</a></li>
+                    <li><a href="javascript:;">工商</a></li>
+                    <li><a href="javascript:;">会计</a></li>
+                    <li><a href="javascript:;">融资</a></li>
+                    <li><a href="javascript:;">品牌</a></li>
+                    <li><a href="javascript:;">商标</a></li>
+                    <li><a href="javascript:;">资质</a></li>
+                    <li><a href="javascript:;">项目</a></li>
+                    <li><a href="javascript:;">专利</a></li>
+                    <li><a href="javascript:;">其他</a></li>
+                    <li><a href="javascript:;">培训</a></li>
+                    <li><a href="javascript:;">律师</a></li>
+                </ul>
+                <p>更多</p>
+            </div>
+            <!--顾问师信息-->
+            <div id="ask-info">
+                <div class="ask-div">
+                    <img src="" alt="">
+                    <strong></strong>
+                    <p>肖真泰顾问</p>
+                    <div>
+                        <p>好评数：</p><p>85</p><p>68成交</p>
+                    </div>
+                    <a href="javascript:;" ></a>
+                </div>
+                <div class="ask-div">
+                    <img src="" alt="">
+                    <strong></strong>
+                    <p>肖真泰顾问</p>
+                    <div>
+                        <p>好评数：</p><p>85</p><p>68成交</p>
+                    </div>
+                    <a href="javascript:;" ></a>
+                </div >
+                <div class="ask-div">
+                    <img src="" alt="">
+                    <strong></strong>
+                    <p>肖真泰顾问</p>
+                    <div>
+                        <p>好评数：</p><p>85</p><p>68成交</p>
+                    </div>
+                    <a href="javascript:;" ></a>
+                </div>
+                <div class="ask-div">
+                    <img src="" alt="">
+                    <strong></strong>
+                    <p>肖真泰顾问</p>
+                    <div>
+                        <p>好评数：</p><p>85</p><p>68成交</p>
+                    </div>
+                    <a href="javascript:;" ></a>
+                </div>
+                <div class="ask-div">
+                    <img src="" alt="">
+                    <strong></strong>
+                    <p>肖真泰顾问</p>
+                    <div>
+                        <p>好评数：</p><p>85</p><p>68成交</p>
+                    </div>
+                    <a href="javascript:;" ></a>
+                </div>
+                <div class="ask-div" style="position: relative;top: -15px;margin-right: 0" >
+                    <img src="" alt="">
+                    <strong></strong>
+                    <p>肖真泰顾问</p>
+                    <div>
+                        <p>好评数：</p><p>85</p><p>68成交</p>
+                    </div>
+                    <a href="javascript:;" ></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--floor-->
+    <div id="footer">
+        <div class="center">
+            <img src="img/sever.jpg" alt="">
+            <ul>
+                <li><a href="javascript">首&nbsp;&nbsp;页</a></li>
+                <li><a href="javascript">找服务</a></li>
+                <li><a href="javascript">选顾问</a></li>
+                <li><a href="javascript">提问题</a></li>
+                <li><a href="javascript">赏案例</a></li>
+                <li><a href="javascript">阅资讯</a></li>
+            </ul>
+
+        </div>
+
+    </div>
+
+    <!--产权服务-->
+    <div id="foot">
+        <div class="center" >
+            <div class="information" style="position: relative;">
+                <div class="info">
+                    <p>知识产权服务</p>
+                    <ul>
+                        <li>商标注册</li><li>商标查询</li>
+                        <li>专利申请</li><li>项目申报</li>
+                        <li>可行性报告</li><li>商业计划书</li>
+                        <li>更多业务</li>
+                    </ul>
+                </div>
+                <div class="info">
+                    <p>知识产权服务</p>
+                    <ul>
+                        <li>商标注册</li><li>商标查询</li>
+                        <li>专利申请</li><li>项目申报</li>
+                        <li>可行性报告</li><li>商业计划书</li>
+                        <li>更多业务</li>
+                    </ul>
+                </div>
+                <div class="info">
+                    <p>知识产权服务</p>
+                    <ul>
+                        <li>商标注册</li><li>商标查询</li>
+                        <li>专利申请</li><li>项目申报</li>
+                        <li>可行性报告</li><li>商业计划书</li>
+                        <li>更多业务</li>
+                    </ul>
+                </div>
+                <div class="info">
+                    <p>知识产权服务</p>
+                    <ul>
+                        <li>商标注册</li><li>商标查询</li>
+                        <li>专利申请</li><li>项目申报</li>
+                        <li>可行性报告</li><li>商业计划书</li>
+                        <li>更多业务</li>
+                    </ul>
+                </div>
+                <div class="info">
+                    <p>知识产权服务</p>
+                    <ul>
+                        <li>商标注册</li><li>商标查询</li>
+                        <li>专利申请</li><li>项目申报</li>
+                        <li>可行性报告</li><li>商业计划书</li>
+                        <li>更多业务</li>
+                    </ul>
+                </div>
+                <div class="info">
+                    <p>知识产权服务</p>
+                    <ul>
+                        <li>商标注册</li><li>商标查询</li>
+                        <li>专利申请</li><li>项目申报</li>
+                        <li>可行性报告</li><li>商业计划书</li>
+                        <li>更多业务</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="information" style="position: relative;">
+                <div class="info">
+                    <p>知识产权服务</p>
+                    <ul>
+                        <li>商标注册</li><li>商标查询</li>
+                        <li>专利申请</li><li>项目申报</li>
+                        <li>可行性报告</li><li>商业计划书</li>
+                        <li>更多业务</li>
+                    </ul>
+                </div>
+                <div class="info">
+                    <p>知识产权服务</p>
+                    <ul>
+                        <li>商标注册</li><li>商标查询</li>
+                        <li>专利申请</li><li>项目申报</li>
+                        <li>可行性报告</li><li>商业计划书</li>
+                        <li>更多业务</li>
+                    </ul>
+                </div>
+                <div class="info">
+                    <p>知识产权服务</p>
+                    <ul>
+                        <li>商标注册</li><li>商标查询</li>
+                        <li>专利申请</li><li>项目申报</li>
+                        <li>可行性报告</li><li>商业计划书</li>
+                        <li>更多业务</li>
+                    </ul>
+                </div>
+                <div class="info">
+                    <p>知识产权服务</p>
+                    <ul>
+                        <li>商标注册</li><li>商标查询</li>
+                        <li>专利申请</li><li>项目申报</li>
+                        <li>可行性报告</li><li>商业计划书</li>
+                        <li>更多业务</li>
+                    </ul>
+                </div>
+                <div class="info">
+                    <p>知识产权服务</p>
+                    <ul>
+                        <li>商标注册</li><li>商标查询</li>
+                        <li>专利申请</li><li>项目申报</li>
+                        <li>可行性报告</li><li>商业计划书</li>
+                        <li>更多业务</li>
+                    </ul>
+                </div>
+                <div class="info">
+                    <p>知识产权服务</p>
+                    <ul>
+                        <li>商标注册</li><li>商标查询</li>
+                        <li>专利申请</li><li>项目申报</li>
+                        <li>可行性报告</li><li>商业计划书</li>
+                        <li>更多业务</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="center" style="padding: 30px">
+                <p>友情链接：言十集团|言十集团</p>
+                <hr>
+                <div>
+                    <img src="" alt="">
+                    <img src="" alt="">
+                    <div>
+                        <strong>技术总部：029-68856888</strong>
+                        <p>西安市碑林区南关正街95号长鑫领先国际2408室</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+</div>
+
+
+
+
+</body>
+</html>

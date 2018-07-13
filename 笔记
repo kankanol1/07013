@@ -1,0 +1,60 @@
+
+
+css
+
+盒子模型：
+        Margin(外边距) - 清除边框外的区域，外边距是透明的。
+        Border(边框) - 围绕在内边距和内容外的边框。
+        Padding(内边距) - 清除内容周围的区域，内边距是透明的。
+        Content(内容) - 盒子的内容，显示文本和图像。
+
+
+css轮廓（outline）
+        轮廓（outline）是绘制于元素周围的一条线，位于边框边缘的外围，可起到突出元素的作用。
+        轮廓（outline）属性指定元素轮廓的样式、颜色和宽度。
+
+           outline	在一个声明中设置所有的轮廓属性	2
+               outline-color
+               outline-style
+               outline-width
+               inherit
+           outline-color	设置轮廓的颜色  2
+               color-name
+               hex-number
+               rgb-number
+               invert
+               inherit
+           outline-style	设置轮廓的样式	 2
+               none
+               dotted
+               dashed
+               solid
+               double
+               groove
+               ridge
+               inset
+               outset
+               inherit
+           outline-width	设置轮廓的宽度	2
+               thin
+               medium
+               thick
+               length
+               inherit
+
+Margin - 简写属性
+        margin属性可以有一到四个值。
+            margin:25px 50px 75px 100px;
+            上边距为25px
+            右边距为50px
+            下边距为75px
+            左边距为100px
+        margin:25px 50px 75px;
+            上边距为25px
+            左右边距为50px
+            下边距为75px
+        margin:25px 50px;
+            上下边距为25px
+            左右边距为50px
+        margin:25px;
+            所有的4个边距都是25px
